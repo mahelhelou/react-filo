@@ -1,3 +1,4 @@
+// Global packages and assets
 import './assets/dist/styles.css'
 
 // Components
