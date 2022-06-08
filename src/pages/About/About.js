@@ -1,44 +1,44 @@
-import showcaseImage from '../../assets/images/showcase.jpg'
+import showcaseImage from '../../assets/images/showcase-bg.png'
 // About page component
 function About() {
 	return (
-		<section class='contact py-5'>
-			<div class='container'>
-				<div class='row'>
-					<div class='col-md-6'>
-						<div class='contact__img'>
-							<img class='img-fluid' src={showcaseImage} alt='Filo about us page' />
+		<section className='contact py-5'>
+			<div className='container'>
+				<div className='row'>
+					<div className='col-md-6'>
+						<div className='contact__img'>
+							<img className='img-fluid' src={showcaseImage} alt='Filo about us page' />
 						</div>
 					</div>
-					<div class='col-md-6'>
-						<div class='contact__message pt-0 pt-md-5'>
-							<h3 class='contact__message-title'>فريق عمل رائع!</h3>
+					<div className='col-md-6'>
+						<div className='contact__message pt-0 pt-md-5'>
+							<h3 className='contact__message-title'>فريق عمل رائع!</h3>
 							<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص</p>
 						</div>
 					</div>
 				</div>
-				<div class='row'>
-					<div class='col-md-6'>
-						<div class='contact__message pt-0 pt-md-5'>
-							<h3 class='contact__message-title'>فريق عمل رائع!</h3>
+				<div className='row'>
+					<div className='col-md-6'>
+						<div className='contact__message pt-0 pt-md-5'>
+							<h3 className='contact__message-title'>فريق عمل رائع!</h3>
 							<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص</p>
 						</div>
 					</div>
-					<div class='col-md-6'>
-						<div class='contact__img'>
-							<img class='img-fluid' src={showcaseImage} alt='Filo about us page' />
+					<div className='col-md-6'>
+						<div className='contact__img'>
+							<img className='img-fluid' src={showcaseImage} alt='Filo about us page' />
 						</div>
 					</div>
 				</div>
-				<div class='row'>
-					<div class='col-md-6'>
-						<div class='contact__img'>
-							<img class='img-fluid' src={showcaseImage} alt='Filo about us page' />
+				<div className='row'>
+					<div className='col-md-6'>
+						<div className='contact__img'>
+							<img className='img-fluid' src={showcaseImage} alt='Filo about us page' />
 						</div>
 					</div>
-					<div class='col-md-6'>
-						<div class='contact__message pt-0 pt-md-5'>
-							<h3 class='contact__message-title'>فريق عمل رائع!</h3>
+					<div className='col-md-6'>
+						<div className='contact__message pt-0 pt-md-5'>
+							<h3 className='contact__message-title'>فريق عمل رائع!</h3>
 							<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص</p>
 						</div>
 					</div>
