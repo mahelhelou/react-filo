@@ -1,15 +1,13 @@
-import OneStory from './../../components/OneStory';
-import Header from './../../components/Header';
-import Footer from './../../components/Footer';
+import OneStory from './../../components/OneStory'
 
 function SingleStory() {
-    return (
-        <>
-            <Header />
-            <OneStory />
-            <Footer />
-        </>
-
-    );
+  return (
+    <>
+      <OneStory />
+      <OneStory />
+      <OneStory />
+      <OneStory />
+    </>
+  )
 }
-export default SingleStory;
+export default SingleStory
