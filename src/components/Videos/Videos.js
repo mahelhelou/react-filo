@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 // import 'owl.carousel/dist/assets/owl.theme.default.css'
@@ -15,7 +16,7 @@ function Videos() {
         شاهد المئات من قصص الأطفال المتنوعة من قصص تاريخية وحيوانات وقصص تعزز
         قيم مجتمعية
       </p>
-      <OwlCarousel loop margin={10}>
+      <OwlCarousel rtlClass="owl-rtl" items={5} nav autoplay>
         <div className="item">
           <div className="card">
             <div className="top-card">
@@ -92,9 +93,9 @@ function Videos() {
       <div className="storySection">
         <h2>
           اكتشف رفوف القصص
-          <a href="">
+          <Link to="/cultural-stories">
             <i className="fa-solid fa-arrow-left-long pr-2"></i>
-          </a>
+          </Link>
         </h2>
       </div>
     </section>
