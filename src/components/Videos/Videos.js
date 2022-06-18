@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
-import OwlCarousel from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-// import 'owl.carousel/dist/assets/owl.theme.default.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import '../../../node_modules/swiper/swiper.min.css'
 
 import rank from '../../assets/images/rank.png'
 import playBtnOrange from '../../assets/images/play-btn-orange.png'
@@ -9,87 +8,105 @@ import playBtnOrange from '../../assets/images/play-btn-orange.png'
 function Videos() {
   return (
     <section className="videos py-5" id="videos-section">
-      <div className="title">
-        <h2 className="section-title mb-3">بلدك في فيديو!</h2>
-      </div>
+      <h2 className="section-title mb-3">بلدك في فيديو!</h2>
       <p className="section-description">
         شاهد المئات من قصص الأطفال المتنوعة من قصص تاريخية وحيوانات وقصص تعزز
         قيم مجتمعية
       </p>
-      <OwlCarousel rtlClass="owl-rtl" items={5} nav autoplay>
-        <div className="item">
-          <div className="card">
-            <div className="top-card">
-              <img src={rank} className="rank-icon" alt="..." />
-              <img src={playBtnOrange} className="card-icon" alt="..." />
+      <Swiper spaceBetween={20} slidesPerView={5} loop autoplay>
+        <div className="swiper-wrapper">
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="singleStory.html" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
             </div>
-            <div className="card-body text-center">
-              <h5 className="card-title">قصة القرد المتشائم </h5>
-              <p className="card-text">
-                مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
-                الصهيوني
-              </p>
-              <a href="singleStory.html" className="btn btn-card btn-primary">
-                شاهد الان
-              </a>
+          </SwiperSlide>
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="singleStory.html" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="singleStory.html" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="#" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="#" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
         </div>
-        <div className="item">
-          <div className="card">
-            <div className="top-card">
-              <img src={rank} className="rank-icon" alt="..." />
-              <img src={playBtnOrange} className="card-icon" alt="..." />
-            </div>
-            <div className="card-body text-center">
-              <h5 className="card-title">قصة القرد المتشائم </h5>
-              <p className="card-text">
-                مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
-                الصهيوني
-              </p>
-              <a href="singleStory.html" className="btn btn-card btn-primary">
-                شاهد الان
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="card">
-            <div className="top-card">
-              <img src={rank} className="rank-icon" alt="..." />
-              <img src={playBtnOrange} className="card-icon" alt="..." />
-            </div>
-            <div className="card-body text-center">
-              <h5 className="card-title">قصة القرد المتشائم </h5>
-              <p className="card-text">
-                مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
-                الصهيوني
-              </p>
-              <a href="#" className="btn btn-card btn-primary">
-                شاهد الان
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="card">
-            <div className="top-card">
-              <img src={rank} className="rank-icon" alt="..." />
-              <img src={playBtnOrange} className="card-icon" alt="..." />
-            </div>
-            <div className="card-body text-center">
-              <h5 className="card-title">قصة القرد المتشائم </h5>
-              <p className="card-text">
-                مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
-                الصهيوني
-              </p>
-              <a href="#" className="btn btn-card btn-primary">
-                شاهد الان
-              </a>
-            </div>
-          </div>
-        </div>
-      </OwlCarousel>
+      </Swiper>
       <div className="storySection">
         <h2>
           اكتشف رفوف القصص
