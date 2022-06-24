@@ -13,6 +13,17 @@ function Header() {
   // Get the name of the path in an array
   const splitLocation = pathname.split('/')
 
+  // Handle search buttn click
+  function handleSearchBtnClick() {
+    let searchBtn = document.querySelector('.search-btn')
+    let searchOverlay = document.querySelector('.search-overlay')
+
+    searchBtn.addEventListener('click', function () {
+      searchOverlay.classList.add('search-overlay--active')
+      document.body.classList.remove('body-no-scroll')
+    })
+  }
+
   return (
     <Navbar
       fixed="top"
@@ -70,7 +81,10 @@ function Header() {
             </Nav.Item>
           </Nav>
           <div className="navbar__actions">
-            <i className="fas fa-search search-btn"></i>
+            <i
+              className="fas fa-search search-btn"
+              onClick={handleSearchBtnClick}
+            ></i>
             <i className="fas fa-bell"></i>
             <i
               className="fas fa-user"

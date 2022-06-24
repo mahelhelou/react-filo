@@ -1,16 +1,13 @@
-
-import UserProfile from './../../components/UserProfile';
-import Header from './../../components/Header';
-import Footer from './../../components/Footer';
+import UserProfile from './../../components/UserProfile'
+import Header from './../../components/Header'
+import Footer from './../../components/Footer'
 
 function Profile() {
-    return (
-        <>
-            <Header />
-            <UserProfile />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <UserProfile />
+    </>
+  )
 }
 
-export default Profile;
+export default Profile

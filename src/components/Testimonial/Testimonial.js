@@ -5,6 +5,27 @@ import divider from '../../assets/images/divider.png'
 import child1 from '../../assets/images/child1.png'
 
 function Testimonial() {
+  function handleClick(e) {
+    e.preventDefault()
+    let element = document.querySelector('.client-single')
+    let active = element.classList.contains('active')
+    let elementParent = element.parentElement
+
+    console.log(element)
+
+    if (!active) {
+      let activeBlock = elementParent.querySelector('.client-single.active')
+      let currentPosition = element.getAttribute('data-position')
+      let newPosition = activeBlock.getAttribute('data-position')
+
+      element.classList.add('active')
+      element.classList.remove('inactive')
+      element.classList.remove(currentPosition)
+      element.classList.add(newPosition)
+      element.setAttribute('data-position', newPosition)
+    }
+  }
+
   return (
     <section id="testimonial-area">
       <div className="container childs">
@@ -12,7 +33,7 @@ function Testimonial() {
         <div className="section-divider">
           <img className="testimonials__divider" src={divider} alt="Divider" />
         </div>
-        <Swiper slidesPerView={1} autoplay loop>
+        <Swiper slidesPerView={1} spaceBetween={30} autoplay loop>
           <div className="swiper-wrapper">
             <SwiperSlide className="item">
               <div className="testi-wrap">
@@ -37,6 +58,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-2"
                   data-position="position-2"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />
@@ -55,6 +77,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-3"
                   data-position="position-3"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />
@@ -73,6 +96,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-4"
                   data-position="position-4"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />
@@ -91,6 +115,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-5"
                   data-position="position-5"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />
@@ -109,6 +134,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-6"
                   data-position="position-6"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />
@@ -127,6 +153,7 @@ function Testimonial() {
                 <div
                   className="client-single inactive position-7"
                   data-position="position-7"
+                  onClick={handleClick}
                 >
                   <div className="client-img">
                     <img src={child1} alt="" />

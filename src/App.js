@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 // Global packages and assets
@@ -7,7 +7,7 @@ import './assets/dist/styles.css'
 // Components
 import Header from './components/Header'
 import Footer from './components/Footer'
-// import Modals from './components/Modals'
+import Modals from './components/Modals'
 
 // Pages
 import Home from './pages/Home'
@@ -24,7 +24,6 @@ function App() {
   return (
     <Router>
       <Header />
-      {/* <Modals /> */}
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,6 +36,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
+      <Modals />
     </Router>
   )
 }

@@ -3,13 +3,11 @@ import Header from './../../components/Header'
 import Footer from './../../components/Footer'
 
 function Payment() {
-	return (
-		<>
-			<Header />
-			<Payments />
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <Payments />
+    </>
+  )
 }
 
 export default Payment
