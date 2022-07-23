@@ -30,7 +30,7 @@ function Header() {
       expand="lg"
       bg="light"
       variant="light"
-      className="px-3 py-4"
+      className="px-3 py-3"
     >
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
