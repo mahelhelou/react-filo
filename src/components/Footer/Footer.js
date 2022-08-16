@@ -97,32 +97,32 @@ function Footer() {
         </div>
       </footer>
 
-      <div class="search-overlay">
-        <div class="search-overlay__content">
-          <h2 class="mb-5">
+      <div className="search-overlay">
+        <div className="search-overlay__content">
+          <h2 className="mb-5">
             ماذا تريد أن تشاهد على&nbsp;
-            <strong class="font-weight-bold text-danger">فيلو؟</strong>
+            <strong className="font-weight-bold text-danger">فيلو؟</strong>
           </h2>
-          <div class="search-overlay__search-input">
+          <div className="search-overlay__search-input">
             <form>
-              <div class="input-group mt-3">
+              <div className="input-group mt-3">
                 <input
-                  class="form-control"
+                  className="form-control"
                   type="search"
                   placeholder="ابحث في فيلو..."
                   name="s"
-                  autofocus
+                  autoFocus
                 />
-                <div class="input-group-append">
-                  <div class="input-group-text" type="submit">
-                    <i class="fas fa-search"></i>
+                <div className="input-group-append">
+                  <div className="input-group-text" type="submit">
+                    <i className="fas fa-search"></i>
                   </div>
                 </div>
               </div>
             </form>
           </div>
           <i
-            class="fas fa-times-circle search-overlay__close"
+            className="fas fa-times-circle search-overlay__close"
             aria-hidden="true"
             onClick={handleSearchClose}
           ></i>
