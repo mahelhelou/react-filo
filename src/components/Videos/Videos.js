@@ -5,6 +5,8 @@ import '../../../node_modules/swiper/swiper.min.css'
 import rank from '../../assets/images/rank.png'
 import playBtnOrange from '../../assets/images/play-btn-orange.png'
 
+import './Videos.scss'
+
 function Videos() {
   return (
     <section className="videos py-5" id="videos-section">
