@@ -1,148 +1,147 @@
 .site-footer {
-	
+  [class*='col-'] {
+    padding-bottom: 2rem;
+    position: relative;
 
+    @include responsive(atSmall) {
+      &::after {
+        position: absolute;
+        content: '';
+        width: 10%;
+        height: 0.25rem;
+        background: #fffdfa;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
 
-	[class*='col-'] {
-		padding-bottom: 2rem;
-		position: relative;
+  .social-icon {
+    text-decoration: none;
+    color: #fff;
+    transition: opacity 0.3s ease;
 
-		@include responsive(atSmall) {
-			&::after {
-				position: absolute;
-				content: '';
-				width: 10%;
-				height: 0.25rem;
-				background: #fffdfa;
-				left: 50%;
-				bottom: 0;
-				transform: translateX(-50%);
-			}
-		}
-	}
+    &:hover {
+      opacity: 0.75;
+    }
 
-	.social-icon {
-		text-decoration: none;
-		color: #fff;
-		transition: opacity .3s ease;
+    .fab,
+    .fas {
+      font-size: 1.25rem;
+      padding: 0 0.5rem;
 
-		&:hover {
-			opacity: .75;
-		}
+      @include responsive(atSmall) {
+        font-size: 1.5rem;
+      }
+    }
+  }
 
-		.fab,
-		.fas {
-			font-size: 1.25rem;
-			padding: 0 .5rem;
+  &__nav {
+    list-style: none;
+    padding: 0;
 
-			@include responsive(atSmall) {
-				font-size: 1.5rem;
-			}
-		}
-	}
+    li {
+      font-size: 1rem;
+      transition: 0.3s opacity ease;
+      margin-bottom: 0.25rem;
 
-	&__nav {
-		list-style: none;
-		padding: 0;
+      &:hover {
+        opacity: 0.75;
+      }
 
-		li {
-			font-size: 1rem;
-			transition: .3s opacity ease;
-			margin-bottom: .25rem;
+      i {
+        margin-right: 0.5rem;
+      }
 
-			&:hover {
-				opacity: .75;
-			}
-
-			i {
-				margin-right: .5rem;
-			}
-
-			a {
-				text-decoration: none;
-				color: #fff;
-			}
-		}
-	}
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
 }
 .site-footer {
-	background-image: url("../images/footerb.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: auto;
-	color: #fffdff;
-	width: 100%;
-	position: absolute;
+  background-image: url('../images/footerb.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  color: #fffdff;
+  width: 100%;
+  position: absolute;
 }
-.footer_black{
-	top:150px;
- background-color: #363636;
- padding-top: 60px;
- position: relative;
- clip-path: ellipse(90% 93% at 50% 100%);
+.footer_black {
+  top: 150px;
+  background-color: #363636;
+  padding-top: 60px;
+  position: relative;
+  clip-path: ellipse(90% 93% at 50% 100%);
 }
 .site-footer h3 {
-	font-size: 16px;
-	color: #fffdff;
+  font-size: 16px;
+  color: #fffdff;
 }
-.subscribeForm{
-	margin-top:30px;
+.subscribeForm {
+  margin-top: 30px;
 }
-.subscribeInput{
-	border-radius: 10px;
-	height: 40px;
-	background: #363636;
-	border:1px solid #ffffffff;
-	padding: 0px 10px 0px 28px;
+.subscribeInput {
+  border-radius: 10px;
+  height: 40px;
+  background: #363636;
+  border: 1px solid #ffffffff;
+  padding: 0px 10px 0px 28px;
+  font-size: 17px;
 }
-.subscribeForm{
-	position: relative;
+.subscribeForm {
+  position: relative;
 }
 
-.subscribeBtn{
-	position: absolute;
-	border-radius: 10px;
-	height: 41px;
-	width: 140px;
-	color: #000000;
-	border: 1px solid #000000;
-	left:0px;
-	top: 0px;
-	background: #ffffffff;
-	font-weight: bold;
+.subscribeBtn {
+  position: absolute;
+  border-radius: 10px;
+  height: 41px;
+  width: 140px;
+  color: #000000;
+  border: 1px solid #000000;
+  left: 0px;
+  top: 0px;
+  background: #ffffffff;
+  font-weight: bold;
+  font-size: 17px;
 }
-.subscribeBtn:hover{
-
-	background: #F4775C;
-	font-weight: bold;
+.subscribeBtn:hover {
+  background: #f4775c;
+  font-weight: bold;
 }
 .footer-menu ul {
-	list-style: outside none none;
-	margin: 0;
-	padding: 0;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
 }
 .footer-menu ul li {
-
-	padding: 5px 0;
+  padding: 5px 0;
 }
 .footer-menu a {
-	display: block;
-	padding: 5px 0;
-	color: #fff;
-	font-size: 14px;
+  display: block;
+  padding: 5px 0;
+  color: #fff;
+  font-size: 14px;
 }
-.footer-menu a:hover{
-	text-decoration: none;
-	color:#bc1939;
+.footer-menu a:hover {
+  text-decoration: none;
+  color: #bc1939;
 }
 .end-page a {
-	font-size: 12px;
+  font-size: 12px;
 }
-@media (max-width: 992px) {   /* responsive mobiles and small devicess*/
-	
-	.item .card{
-        margin:0 auto;
-      }
-	  .footer_black{
-		  padding-top: 150px;
-	  }
+@media (max-width: 992px) {
+  /* responsive mobiles and small devicess*/
+
+  .item .card {
+    margin: 0 auto;
+  }
+  .footer_black {
+    padding-top: 150px;
+    top: 79px;
+  }
 }

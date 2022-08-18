@@ -15,8 +15,49 @@ function Videos() {
         شاهد المئات من قصص الأطفال المتنوعة من قصص تاريخية وحيوانات وقصص تعزز
         قيم مجتمعية
       </p>
-      <Swiper spaceBetween={20} slidesPerView={5} loop autoplay>
+      <Swiper
+        lazy
+        spaceBetween={10}
+        slidesPerView={5}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        pagination={{ clickable: true, el: '.swiper-pagination' }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        }}
+      >
         <div className="swiper-wrapper">
+          <SwiperSlide className="item">
+            <div className="card">
+              <div className="top-card">
+                <img src={rank} className="rank-icon" alt="..." />
+                <img src={playBtnOrange} className="card-icon" alt="..." />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">قصة القرد المتشائم </h5>
+                <p className="card-text">
+                  مدينة من مدن فلسطين تم احتلالها سنة 1948 علي يد جيش الاحتلال
+                  الصهيوني
+                </p>
+                <a href="singleStory.html" className="btn btn-card btn-primary">
+                  شاهد الان
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
           <SwiperSlide className="item">
             <div className="card">
               <div className="top-card">
