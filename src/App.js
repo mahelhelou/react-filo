@@ -7,7 +7,6 @@ import './assets/dist/styles.css'
 // Components
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Modals from './components/Modals'
 
 // Pages
 import Home from './pages/Home'
@@ -36,7 +35,6 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-      <Modals />
     </Router>
   )
 }

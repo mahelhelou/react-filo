@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 import airPlane from '../../assets/images/airplane.gif'
 
@@ -9,11 +9,9 @@ import airPlane from '../../assets/images/airplane.gif'
 function Header() {
   /**
    * States
-   * 1. Login modal state
-   * 2. Sign up modal
+   * showModal state
    */
-  const [loginModalShow, setLoginModalShow] = useState(false)
-  const [signUpModalShow, setSignUpModalShow] = useState(false)
+  const [show, setShow] = useState(false)
 
   /**
    * Assign location to a variable
@@ -28,50 +26,26 @@ function Header() {
    * Handlers:
    * 1. Show login modal
    * 2. Close login
-   * 3. Show singe up modal
-   * 4. Close singe up modal
-   * 5. Open search overlay
-   * 6. Close search overlay
-   * 7. Redirect to search results page
+   * 3. Show signup modal
+   * 4. Close signup modal
    */
   function handleLoginModalShow() {
-    setLoginModalShow(true)
-    setSignUpModalShow(false)
+    setShow(true)
   }
 
   function handleLoginModalClose() {
-    setLoginModalShow(false)
+    setShow(false)
   }
 
-  function handleSignUpModalShow() {
-    setLoginModalShow(false)
-    setSignUpModalShow(true)
-  }
+  // Handle search buttn click
+  function handleSearchBtnClick() {
+    let searchBtn = document.querySelector('.search-btn')
+    let searchOverlay = document.querySelector('.search-overlay')
 
-  function handleSignUpModalClose() {
-    setSignUpModalShow(false)
-  }
-
-  function handleSearchOverlayOpen() {
-    document
-      .querySelector('.search-overlay')
-      .classList.add('search-overlay--active')
-    document.body.classList.add('body-no-scroll')
-  }
-
-  function handleSearchOverlayClose() {
-    document
-      .querySelector('.search-overlay')
-      .classList.remove('search-overlay--active')
-    document.body.classList.remove('body-no-scroll')
-  }
-
-  const navigate = useNavigate()
-
-  function handleSearchFormSubmit(e) {
-    e.preventDefault()
-
-    navigate('/profile')
+    searchBtn.addEventListener('click', function () {
+      searchOverlay.classList.add('search-overlay--active')
+      document.body.classList.remove('body-no-scroll')
+    })
   }
 
   return (
@@ -136,7 +110,7 @@ function Header() {
             <div className="navbar__actions">
               <i
                 className="fas fa-search search-btn"
-                onClick={handleSearchOverlayOpen}
+                onClick={handleSearchBtnClick}
               ></i>
               <i className="fas fa-bell"></i>
               <i className="fas fa-user" onClick={handleLoginModalShow}></i>
@@ -145,14 +119,13 @@ function Header() {
         </Container>
       </Navbar>
 
-      <Modal show={loginModalShow} animation centered>
+      <Modal show={show} animation centered>
         <Modal.Body>
-          <Button className="close">
-            <span aria-hidden="true" onClick={handleLoginModalClose}>
-              &times;
-            </span>
+          <Button className="close" onClick={handleLoginModalClose}>
+            <span aria-hidden="true">&times;</span>
           </Button>
-          <img src={airPlane} alt="Air Plane" />
+
+          <img src={airPlane} alt="airplane" />
           <div className="form-title text-center">
             <h4 className="text-center mb-3">تسجيل دخول</h4>
             <div className="d-flex flex-column text-center">
@@ -171,70 +144,51 @@ function Header() {
                     placeholder="كلمة المرور"
                   />
                 </div>
-                <Button className="btn btn-block btn11 mt-1" type="button">
+                <Button className="btn btn-block btn11 mt-1" type="submit">
                   تسجيل الدخول
                 </Button>
                 <p className="mt-3">
                   اذا لم يكن لديك حساب أنشئ{' '}
-                  <Link to="" onClick={handleSignUpModalShow}>
-                    حساب جديد
-                  </Link>
+                  <Button className="btn btn-link">حساب جديد</Button>
                 </p>
               </form>
             </div>
-          </div>{' '}
+          </div>
         </Modal.Body>
       </Modal>
 
-      <Modal show={signUpModalShow} animation centered>
+      <Modal show={show} animation aria-labelledby="login-form-label" centered>
         <Modal.Body>
-          <Button className="close">
-            <span aria-hidden="true" onClick={handleSignUpModalClose}>
-              &times;
-            </span>
+          <Button className="close" onClick={handleLoginModalClose}>
+            <span aria-hidden="true">&times;</span>
           </Button>
-          <img src={airPlane} alt="Air Plane" />
-          <div class="form-title text-center">
-            <h4 class="text-center mb-3">حساب جديد</h4>
-            <div class="d-flex flex-column text-center">
+
+          <img src={airPlane} alt="airplane" />
+          <div className="form-title text-center">
+            <h4 className="text-center mb-3">تسجيل دخول</h4>
+            <div className="d-flex flex-column text-center">
               <form>
-                <div class="form-group">
-                  <input id="name1" type="text" placeholder="الاسم" />
-                </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     id="email1"
                     type="email"
                     placeholder="اسم المستخدم أو البريد الإلكتروني"
                   />
                 </div>
-                <div class="form-group">
-                  <input id="date1" type="text" placeholder="تاريخ الميلاد" />
-                </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     id="password"
                     type="password"
                     placeholder="كلمة المرور"
                   />
                 </div>
-                <div class="form-check mb-3 pr-3 float-right">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1">
-                    تذكرني
-                  </label>
-                </div>
-                <Button className="btn btn-block btn11 mt-1" type="button">
-                  تسجيل جديد
+                <Button className=" btn btn-block btn11 mt-1" type="button">
+                  <Link>تسجيل الدخول</Link>
                 </Button>
-                <p class="mt-3">
-                  هل لديك حساب{' '}
-                  <Link to="" onClick={handleLoginModalShow}>
-                    تسجيل دخول
+                <p className="mt-3">
+                  اذا لم يكن لديك حساب أنشئ{' '}
+                  <Link href="" data-toggle="modal" data-target="#sign-form">
+                    حساب جديد
                   </Link>
                 </p>
               </form>
@@ -242,38 +196,6 @@ function Header() {
           </div>
         </Modal.Body>
       </Modal>
-
-      <div className="search-overlay">
-        <div className="search-overlay__content">
-          <h2 className="mb-5">
-            ماذا تريد أن تشاهد على&nbsp;
-            <strong className="font-weight-bold text-danger">فيلو؟</strong>
-          </h2>
-          <div className="search-overlay__search-input">
-            <form onSubmit={handleSearchFormSubmit}>
-              <div className="input-group mt-3">
-                <input
-                  className="form-control"
-                  type="search"
-                  placeholder="ابحث في فيلو..."
-                  name="s"
-                  autoFocus
-                />
-                <div className="input-group-append">
-                  <div className="input-group-text" type="submit">
-                    <i className="fas fa-search"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <i
-            className="fas fa-times-circle search-overlay__close"
-            aria-hidden="true"
-            onClick={handleSearchOverlayClose}
-          ></i>
-        </div>
-      </div>
     </>
   )
 }
