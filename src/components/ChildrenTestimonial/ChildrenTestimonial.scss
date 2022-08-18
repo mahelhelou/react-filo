@@ -1,0 +1,144 @@
+.carousel {
+  position: relative;
+}
+#testimonial-area {
+  margin: 2% 0 20% 0;
+}
+.carousel-item.active {
+  margin-top: 4%;
+  overflow: visible;
+}
+.carousel-item {
+  overflow: hidden;
+}
+.carousel-item img {
+  max-width: 160px;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 24px;
+  border: 0;
+  position: relative;
+}
+.carousel-item.active::after {
+  width: 180px;
+  height: 180px;
+  top: -11px;
+  right: 44%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 100%;
+  content: '';
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9d5bfe),
+    to(#3890fe)
+  );
+  background-image: linear-gradient(180deg, #9d5bfe 0%, #3890fe 100%);
+  padding: 25px;
+}
+.carousel-info {
+  background-color: #c9e8c4;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  width: 45%;
+  margin: 0 auto;
+}
+.carousel-info p {
+  color: #f4775c;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.carousel-info h3 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+.carousel-indicators button {
+  background-color: white;
+  background-image: url(../../assets/images/child1.png);
+  background-size: cover;
+  height: 100px;
+  width: 104px;
+  border: 3px solid #d1e9ff;
+  cursor: pointer;
+  margin: 5em auto 0;
+  position: absolute;
+  border-radius: 50%;
+  outline: 3px solid #d1e9ff;
+}
+.carousel-indicators .active button {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9d5bfe),
+    to(#3890fe)
+  );
+  background-image: linear-gradient(180deg, #9d5bfe 0%, #3890fe 100%);
+}
+.carousel-indicators button:nth-of-type(1) {
+  bottom: 250px;
+  right: 55px;
+}
+.carousel-indicators button:nth-of-type(2) {
+  bottom: 75px;
+  right: -40px;
+}
+.carousel-indicators button:nth-of-type(3) {
+  bottom: -100px;
+  right: 45px;
+}
+.carousel-indicators button:nth-of-type(5) {
+  left: 55px;
+  bottom: -100px;
+}
+.carousel-indicators button:nth-of-type(6) {
+  left: -60px;
+  bottom: 75px;
+}
+.carousel-indicators button:nth-of-type(7) {
+  left: -40px;
+  bottom: 250px;
+}
+/*.carousel-item.active:nth-of-type(7),
+.carousel-item.active:nth-of-type(6),
+.carousel-item.active:nth-of-type(5) {
+  transition: transform 0.6s ease-out;
+}
+.carousel-item.active:nth-of-type(1),
+.carousel-item.active:nth-of-type(2),
+.carousel-item.active:nth-of-type(3) {
+  transition: transform 0.6s ease;
+}
+.carousel-info {
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-item.active:nth-of-type(4) {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}*/

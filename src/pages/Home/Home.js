@@ -3,7 +3,8 @@ import Header from '../../components/Header'
 import Showcase from '../../components/Showcase'
 import Videos from '../../components/Videos'
 import Plans from './../../components/Plans'
-import Testimonial from './../../components/Testimonial'
+import ChildrenTestimonial from './../../components/ChildrenTestimonial'
+import Plane from './../../components/Plane'
 import Footer from './../../components/Footer'
 
 function Home() {
@@ -12,7 +13,8 @@ function Home() {
       <Showcase />
       <Videos />
       <Plans />
-      <Testimonial />
+      <ChildrenTestimonial />
+      <Plane />
     </>
   )
 }

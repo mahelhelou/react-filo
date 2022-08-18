@@ -1,0 +1,10 @@
+.plane {
+  position: fixed;
+  top: -5%;
+  right: -6%;
+  z-index: -11111;
+  transform: rotate(94deg);
+}
+.plane img {
+  height: 800px;
+}
