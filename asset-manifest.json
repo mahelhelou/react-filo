@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-filo/static/css/main.43369a3f.css",
-    "main.js": "/react-filo/static/js/main.80db3781.js",
+    "main.css": "/react-filo/static/css/main.98417db1.css",
+    "main.js": "/react-filo/static/js/main.78ea2e8d.js",
     "static/js/787.22e18ff0.chunk.js": "/react-filo/static/js/787.22e18ff0.chunk.js",
     "static/media/fa-solid-900.svg": "/react-filo/static/media/fa-solid-900.0454203f26b33fc02e2b.svg",
     "static/media/fa-brands-400.svg": "/react-filo/static/media/fa-brands-400.991c1c761fc31f9c3252.svg",
@@ -31,12 +31,12 @@
     "static/media/Path-363.png": "/react-filo/static/media/Path-363.1ba3c93f29a8964750ee.png",
     "static/media/bacModal.PNG": "/react-filo/static/media/bacModal.00ad766f3ad8550cbc62.PNG",
     "index.html": "/react-filo/index.html",
-    "main.43369a3f.css.map": "/react-filo/static/css/main.43369a3f.css.map",
-    "main.80db3781.js.map": "/react-filo/static/js/main.80db3781.js.map",
+    "main.98417db1.css.map": "/react-filo/static/css/main.98417db1.css.map",
+    "main.78ea2e8d.js.map": "/react-filo/static/js/main.78ea2e8d.js.map",
     "787.22e18ff0.chunk.js.map": "/react-filo/static/js/787.22e18ff0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43369a3f.css",
-    "static/js/main.80db3781.js"
+    "static/css/main.98417db1.css",
+    "static/js/main.78ea2e8d.js"
   ]
 }
