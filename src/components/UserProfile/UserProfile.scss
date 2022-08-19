@@ -1,0 +1,12 @@
+.ProfilePage .infoUser {
+  margin-bottom: 7%;
+}
+.ProfilePage .profileUser {
+  margin-top: 5%;
+}
+@media (max-width: 768px) {
+  .ProfilePage .row .card {
+    padding: 20px;
+    height: auto;
+  }
+}

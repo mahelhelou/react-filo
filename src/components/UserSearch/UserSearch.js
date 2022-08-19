@@ -1,5 +1,6 @@
 import play from "../../assets/images/play-btn-orange.png";
 
+import './UserSearch.scss'
 
 function UserSearch() {
     return (

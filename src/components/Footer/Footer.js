@@ -1,6 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import './Footer.scss'
+
 function Footer() {
   return (
     <footer className="site-footer ">

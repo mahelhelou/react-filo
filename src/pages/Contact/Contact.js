@@ -1,5 +1,7 @@
 import showcaseImage from '../../assets/images/showcase-bg.png'
 
+import "./Contact.scss"
+
 // Contact page
 function Contact() {
 	return (

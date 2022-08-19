@@ -1,7 +1,12 @@
 .videos {
-    z-index: -11;
+  z-index: -11;
 }
 .card .top-card {
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .videos {
+    margin: auto 7%;
+  }
 }

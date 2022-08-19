@@ -71,7 +71,7 @@
   position: absolute;
 }
 .footer_black {
-  top: 150px;
+  top: 80px;
   background-color: #363636;
   padding-top: 60px;
   position: relative;
@@ -142,6 +142,10 @@
   }
   .footer_black {
     padding-top: 150px;
-    top: 79px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer_black {
+    top: 150px;
   }
 }

@@ -1,8 +1,11 @@
 import showcaseImage from '../../assets/images/showcase-bg.png'
+
+import './About.scss'
+
 // About page component
 function About() {
 	return (
-		<section className='contact py-5'>
+		<section className='contact about py-5'>
 			<div className='container'>
 				<div className='row'>
 					<div className='col-md-6'>

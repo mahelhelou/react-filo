@@ -1,5 +1,7 @@
 import subscription from '../../assets/images/subscription-bg.png'
 
+import './Plans.scss'
+
 function Plans() {
   return (
     <section className="plans py-5">
