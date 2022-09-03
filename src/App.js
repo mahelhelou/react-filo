@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import CulturalStories from './pages/CulturalStories'
+import MultiTrackStories from './pages/MultiTrackStories'
 import Contact from './pages/Contact'
 import PageNotFound from './pages/PageNotFound'
 // import Payment from './pages/Payment'
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/cultural-stories" element={<CulturalStories />} />
+        <Route path="/multi-track-stories" element={<MultiTrackStories />} />
         <Route path="/contact" element={<Contact />} />
         {/* <Route path='/payment' element={<Payment />} /> */}
         <Route path="/profile" element={<Profile />} />
